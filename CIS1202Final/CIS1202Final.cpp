@@ -8,8 +8,50 @@
 
 #include <iostream>
 
-int main()
-{
+#include "Trip.h"
+
+using namespace std;
+
+// Function to create the menu
+int menu() {
+	int in;
+	cout << "1) Add New Vacation\n";
+	cout << "2) View All Vacations\n";
+	cout << "3) Find a Vacation\n";
+	cout << "4) Sort in Order of Cost\n";
+	cout << "5) Exit\n\n";
+	cin >> in;
+	return in;
+}
+
+Trip newTrip() {
+	string name;
+	string date;
+	int tex;
+	int fex;
+	int vex;
+	int oex;
+	int total;
+
+	cout << "Name\n";
+	getline(cin, name);
+	cout << "\nDate\n";
+	getline(cin, date);
+	cout << "\nTravel Expenses (Plane/Car): $";
+	cin >> tex;
+	cout << "\nFood Expenses: $";
+	cin >> fex;
+	cout << "Visiting Fees (Hotel/Rental): $";
+	cin >> vex;
+	cout << "\nOther Expenses: $";
+	cin >> oex;
+	cout << "\nTotal Expenses: $";
+	cin >> total;
+}
+
+// Main Method
+int main() {
+
 
 }
 
