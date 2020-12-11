@@ -24,8 +24,14 @@ private:
 	int total;
 
 public:
+	// Default Constructor
 	Trip();
+	
+	// Constructor
 	Trip(string n, string d, int t, int f, int v, int o, int to);
+
+	// Display Function
+	void displayTrip();
 	
 	// Getters
 	string getName();

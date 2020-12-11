@@ -10,6 +10,7 @@
 
 using namespace std;
 
+// Default Constructor Declaration
 Trip::Trip() {
 	name = "null";
 	date = "null";
@@ -29,6 +30,17 @@ Trip::Trip(string n, string d, int t, int f, int v, int o, int to) {
 	vex = v;
 	oex = o;
 	total = to;
+}
+
+// Display Function Declaration
+void Trip::displayTrip() {
+	cout << "Trip Name: " << name << "\n";
+	cout << "Trip Date: " << date << "\n";
+	cout << "Trip Travel Expenses (Plane/Car): $" << tex << "\n";
+	cout << "Food Expenses: $" << fex << "\n";
+	cout << "Visiting Fees (Hotel/Rental): $" << vex << "\n";
+	cout << "Other Expenses: $" << oex << "\n";
+	cout << "Total Expenses: $" << total << "\n";
 }
 
 // Getter Declarations
@@ -63,7 +75,7 @@ int Trip::getTotal() {
 // Setter Declarations
 
 void Trip::setName(string s) {
-	name = s
+	name = s;
 }
 
 void Trip::setDate(string s) {
