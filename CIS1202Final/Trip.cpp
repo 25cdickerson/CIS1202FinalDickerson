@@ -32,17 +32,6 @@ Trip::Trip(string n, string d, int t, int f, int v, int o, int to) {
 	total = to;
 }
 
-// Display Function Declaration
-void Trip::displayTrip() {
-	cout << "Trip Name: " << name << "\n";
-	cout << "Trip Date: " << date << "\n";
-	cout << "Trip Travel Expenses (Plane/Car): $" << tex << "\n";
-	cout << "Food Expenses: $" << fex << "\n";
-	cout << "Visiting Fees (Hotel/Rental): $" << vex << "\n";
-	cout << "Other Expenses: $" << oex << "\n";
-	cout << "Total Expenses: $" << total << "\n";
-}
-
 // Getter Declarations
 string Trip::getName() {
 	return name;
@@ -70,6 +59,17 @@ int Trip::getOex() {
 
 int Trip::getTotal() {
 	return total;
+}
+
+// Display Function Declaration
+void Trip::displayTrip() {
+	cout << "Trip Name: " << getName() << "\n";
+	cout << "Trip Date: " << getDate() << "\n";
+	cout << "Trip Travel Expenses (Plane/Car): $" << getTex() << "\n";
+	cout << "Food Expenses: $" << getFex() << "\n";
+	cout << "Visiting Fees (Hotel/Rental): $" << getVex() << "\n";
+	cout << "Other Expenses: $" << getOex() << "\n";
+	cout << "Total Expenses: $" << getTotal() << "\n";
 }
 
 // Setter Declarations

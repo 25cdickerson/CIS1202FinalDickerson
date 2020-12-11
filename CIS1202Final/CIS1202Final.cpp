@@ -7,6 +7,7 @@
 // the trip based on entered values.
 
 #include <iostream>
+#include <vector>
 
 #include "Trip.h"
 
@@ -24,6 +25,7 @@ int menu() {
 	return in;
 }
 
+// Function created to create a new vacation entry
 Trip newTrip() {
 	string name;
 	string date;
@@ -47,11 +49,43 @@ Trip newTrip() {
 	cin >> oex;
 	cout << "\nTotal Expenses: $";
 	cin >> total;
+
+	Trip a = Trip(name, date, tex, fex, vex, oex, total);
+	return a;
+}
+
+// Function created to display all trips created
+void allTrips(vector<Trip> t) {
+	for (size_t i = 0; i < t.size(); i++) {
+		cout << "#" << i + 1 << ": ";
+		t.at(i).displayTrip();
+	}
 }
 
 // Main Method
 int main() {
+	// Intial Messages
+	cout << "Enter your first trip to start:\n\n";
+	vector<Trip> trips;
+	trips.push_back(newTrip());
 
+	// Loops through the menu until you hit '5'
+	int m = menu();
+	while (m != 5) {
+		if (m == 1) {
+			trips.push_back(newTrip());
+			cout << "Trip added successfully\n\n";
+		}
+		else if (m == 2) {
+			allTrips(trips);
+		}
+		else if (m == 3) {
+
+		}
+		else if (m == 4) {
+
+		}
+	}
 
 }
 
