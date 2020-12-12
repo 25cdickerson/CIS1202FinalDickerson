@@ -27,7 +27,7 @@ public:
 	// Default Constructor
 	Trip();
 	
-	// Constructor
+	// Overloaded Constructor
 	Trip(string n, string d, int t, int f, int v, int o, int to);
 
 	// Display Function
